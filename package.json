@@ -1,0 +1,30 @@
+{
+  "name": "visitiago",
+  "version": "1.0.0",
+  "description": "Aplicación para tablets para registrar eficazmente las visitas que reciben los empleados de una empresa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleisabl/hackaton-visitors.git"
+  },
+  "keywords": [
+    "visitors",
+    "visitor",
+    "managenemt",
+    "app",
+    "tablet",
+    "registration"
+  ],
+  "author": "Alexandra, Karen, Majo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleisabl/hackaton-visitors/issues"
+  },
+  "homepage": "https://github.com/aleisabl/hackaton-visitors#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
