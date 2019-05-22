@@ -2,7 +2,7 @@
   "name": "visitiago",
   "version": "1.0.0",
   "description": "Aplicación para tablets para registrar eficazmente las visitas que reciben los empleados de una empresa.",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
     "test": "jest"
   },
