@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/aleisabl/hackaton-visitors#readme",
   "devDependencies": {
+    "eslint": "^5.16.0",
     "jest": "^24.8.0"
   }
 }
