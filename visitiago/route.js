@@ -46,4 +46,3 @@ const changeRouter = (hash) => {
         changeRouter(window.location.hash);
       }
     }
- 
