@@ -19,6 +19,15 @@ text-align: center;
 color: #F5F5F5;
 }
 
+#logo {
+  background-image: url(../assets/logo.png);
+  margin-top: 0.2cm;
+  height: 200px;
+  background-size: 209px;
+  background-repeat: no-repeat;
+  margin-left: 70px;
+}
+
 #name {
 width: 483px;
 height: 120px;
