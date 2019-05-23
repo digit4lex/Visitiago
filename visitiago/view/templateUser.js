@@ -1,14 +1,12 @@
 export const templateUser = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
-    const contentCreate = `
-      
-          <div class='' id="green-columns">
-                
-            </div>
+    const contentCreate = `<div class='' id="green-columns">
+                </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="text" id="full-name" placeholder="Nombre y apellido" name="">
+                <input type="text" id="name" placeholder="Nombre y apellido" name="">
+                <input type="text" id="lastname" placeholder="Nombre y apellido" name="">
             </div>
 
                 <i class="fas fa-key"></i>
@@ -16,10 +14,7 @@ export const templateUser = () => {
             </div>
             <div >
                 <button id="register" class="sign-in-style">registra visitante</button>
-            </div>
-          
-    
-   `;
+            </div>`;
 
     //pasar cel contenido al div
     containerCreate.innerHTML = contentCreate;
@@ -38,8 +33,6 @@ export const templateUser = () => {
         } else {
             registerUser(rut, fullName)
         }
-
-
     })
     return containerCreate;
 }

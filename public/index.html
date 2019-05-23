@@ -5,49 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Visitors App</title>
     
-    <link rel="icon" type="image/png" href="../visitiago/assets/icon.png" sizes="16x16"> 
-    <link rel="stylesheet" type="text/css" href="../visitiago/style.css">
-
-    <script defer src="/__/firebase/6.0.2/firebase-app.js"></script>
-    <!-- <script defer src="/__/firebase/6.0.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.0.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/6.0.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/6.0.2/firebase-storage.js"></script> -->
-    <script defer src="/__/firebase/init.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <link rel="icon" type="image/png" href="../visitiago/assets/icon.png" sizes="16x16">
 
   </head>
   <body>
     <div id="root">
-      <h2 id="messages"></h2>
+      <h2 id="messages">Hola</h2>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        /* try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        } */
-      });
-    </script>
-
-    <script src="../visitiago//index.js"></script>
-    <script src="../visitiago/view/templateAdmin.js"></script>
-    <script src="../visitiago/view/templateUser.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script type="module" src="../visitiago/index.js"></script>
   </body>
 </html>
