@@ -3,27 +3,27 @@ import {templateAdmin} from './templateAdmin.js'
 export const templateUser = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
-    const contentCreate = `<div class='' id="green-columns">
-                </div>
-                <div id="logo">
-                </div>
+    const contentCreate = `
+                <img id="logo" src="../visitiago/assets/logo.png">
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="text" id="fullname" placeholder="Nombre y Apellido" name="">
+                <p class="fullname">Nombre y Apellido</p>
+                <input type="text" id="fullname" name="">
             </div>
 
             <div>
                 <i class="fas fa-key"></i>
-               <input type="number" id="rut" placeholder="RUT" name="">
-
-            <div class="photo">
-                <progress value ="0" max= "100" id="uploader">0%</progress>
-                <input type="file" value="upload" id="fileButton" />
+                <p class="rut">RUT</p>
+               <input type="text" id="rut" name="">
             </div>
 
+            <div class="photo">
+            <p class="uploadPhoto">Ingrese una foto</p>
+            <input type="file" accept="image/*" value="upload" id="fileButton" capture="camera">
             </div>
 
             <div>
+            <p class="selectCoworker">¿A quién viene a visitar?</p>
             <select id="myList" onchange="myFunction()">
             </select>
             </div>
@@ -32,11 +32,10 @@ export const templateUser = () => {
             <div>
                 <button id="register" class="sign-in-style">Registrar</button>
             </div>
+            <br>
+            <br>
 
-            <footer>
-            <a href="#/admin">Ingresar como administrador</a>
-            </footer>
-
+            <a id="adminText" href="#/admin">Ingresar como administrador</a>
             `;
 
     //pasar cel contenido al div
