@@ -38,6 +38,7 @@ const changeRouter = (hash) => {
     window.addEventListener('load', changeRouter(window.location.hash));
     let containerRoot=document.getElementById('root');
     containerRoot.appendChild(templateUser());
+  }
   
     // reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
     if ('onhashchange' in window) {
@@ -45,4 +46,4 @@ const changeRouter = (hash) => {
         changeRouter(window.location.hash);
       }
     }
-  }
+ 

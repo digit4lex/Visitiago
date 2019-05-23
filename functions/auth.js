@@ -1,4 +1,4 @@
-
+/* 
 import {checkUser} from '../js/validation.js'
 
 //Función para registro de nuevo usuario
@@ -86,4 +86,4 @@ export const observer =()=>{
          window.location.hash="";
         }
       });
-}
+} */
