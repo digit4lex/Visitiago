@@ -5,15 +5,14 @@ export const templateUser = () => {
                 </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="text" id="name" placeholder="Nombre y apellido" name="">
-                <input type="text" id="lastname" placeholder="Nombre y apellido" name="">
+                <input type="text" id="name" placeholder="Nombre y Apellido" name="">
             </div>
 
                 <i class="fas fa-key"></i>
-               <input type="number" id="rut" placeholder="rut" name="">
+               <input type="number" id="rut" placeholder="RUT" name="">
             </div>
             <div >
-                <button id="register" class="sign-in-style">registra visitante</button>
+                <button id="register" class="sign-in-style">Registrar visitante</button>
             </div>`;
 
     //pasar cel contenido al div
