@@ -72,8 +72,6 @@ export const templateUser = () => {
             alert('Por favor coloca tu nombre y apellido')
         } else {
             newVisitor(rut, fullName)
-
-            rut += ''
         }
     })
     return containerCreate;

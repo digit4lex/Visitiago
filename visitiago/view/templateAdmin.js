@@ -1,5 +1,3 @@
-
-
 export const templateAdmin = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
@@ -9,15 +7,22 @@ export const templateAdmin = () => {
                 <ul id="visitorsList"></ul>
             </div>
                
-            <div >
+            <div>
                 <button id="stats" class="sign-in-style">Ver estadísticas</button>
-            </div>`;
+            </div>
+               `;
 
     //pasar cel contenido al div
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#register');
 
-    return containerCreate;
+   
+
+    if (prompt('Ingresa la contraseña') != 1234) {
+        alert('Contraseña inválida')
+    } else {
+        return containerCreate;
+    } 
 }
 
