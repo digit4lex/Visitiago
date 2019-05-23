@@ -9,7 +9,7 @@ export const templateUser = () => {
                 </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="text" id="name" placeholder="Nombre y Apellido" name="">
+                <input type="text" id="fullname" placeholder="Nombre y Apellido" name="">
             </div>
 
             <div>
@@ -43,8 +43,11 @@ export const templateUser = () => {
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#register');
-    const btnAdmin = containerCreate.querySelector('#admin')
     const coworkersList = containerCreate.querySelector('#myList');
+
+     /* let rut = containerCreate.querySelector('#rut').value;
+        let fullName = containerCreate.querySelector('#fullname').value;
+        let resultFullName = verifyFullName(fullName); */
 
     function renderList(doc) {
         let option = document.createElement('option');
@@ -70,13 +73,8 @@ export const templateUser = () => {
     //evento del botón que llama a la autentificación de Google
     btn.addEventListener('click', () => {
 
-        let rut = containerCreate.querySelector('#rut').value;
-        let fullName = containerCreate.querySelector('#full-name').value;
-        let resultFullName = verifyFullName(fullName);
-
-        // Obtener Elementos
-let uploader = document.querySelector('#uploader');
-let fileButton = document.querySelector('#fileButton');
+        let uploader = document.querySelector('#uploader');
+        let fileButton = document.querySelector('#fileButton');
 // Vigilar selección archivo
 fileButton.addEventListener('change', function(e) {
   //Obtener archivo
@@ -90,7 +88,6 @@ fileButton.addEventListener('change', function(e) {
     function progress(snapshot) {
       let percentage = (snapshot.bytesTransferred /
         snapshot.totalBytes) * 100;
-      uploader.value = percentage;
     },
     
     function error(err) {
@@ -101,11 +98,11 @@ fileButton.addEventListener('change', function(e) {
 });
 
         
-        if (resultFullName === false) {
+      /*   if (resultFullName === false) {
             alert('Por favor coloca tu nombre y apellido')
         } else {
             newVisitor(rut, fullName)
-        }
+        } */
     })
     return containerCreate;
 }
