@@ -2,9 +2,9 @@
 import {checkUser} from '../js/validation.js'
 
 //Función para registro de nuevo usuario
-export const user = (name, lastname, rut, password, confirmPassword) => {
+export const user = (name, lastname, rut) => {
 
-    if (checkUser(name, lastname, email, password, confirmPassword)){
+    if (checkUser(name, lastname, rut)){
          alert('Creación de usuario exitosa')
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(){

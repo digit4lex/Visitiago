@@ -8,7 +8,6 @@ export const templateUser = () => {
                 <i class="fas fa-user-alt"></i>
                 <input type="text" id="name" placeholder="Nombre y Apellido" name="">
             </div>
-
                 <i class="fas fa-key"></i>
                <input type="number" id="rut" placeholder="RUT" name="">
             </div>

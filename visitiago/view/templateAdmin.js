@@ -8,7 +8,6 @@ export const templateAdmin = () => {
                 <input type="text" id="name" placeholder="Nombre y apellido" name="">
                 <input type="text" id="lastname" placeholder="Nombre y apellido" name="">
             </div>
-
                 <i class="fas fa-key"></i>
                <input type="number" id="rut" placeholder="rut" name="">
             </div>
