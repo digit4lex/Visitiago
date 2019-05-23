@@ -1,3 +1,5 @@
+import {templateAdmin} from './templateAdmin.js'
+
 export const templateUser = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
@@ -16,22 +18,48 @@ export const templateUser = () => {
             </div>
 
             <div>
-            <select id="mySelect" onchange="myFunction()">
-            <option value="Audi">Mario Benedicto</option>
-            <option value="BMW">Sopaipilla</option>
-            <option value="Mercedes">Carlitos</option>
-            <option value="Volvo">Ale</option>
+            <select id="myList" onchange="myFunction()">
             </select>
             </div>
+            
 
             <div>
                 <button id="register" class="sign-in-style">Registrar</button>
-            </div>`;
+            </div>
+
+            <footer>
+            <a href="#/admin">Ingresar como administrador</a>
+            </footer>
+
+            `;
 
     //pasar cel contenido al div
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#register');
+    const btnAdmin = containerCreate.querySelector('#admin')
+    const coworkersList = containerCreate.querySelector('#myList');
+
+    function renderList(doc) {
+        let option = document.createElement('option');
+        let fullname = document.createElement('span');
+       /*  let rut = document.createElement('span'); */
+
+        option.setAttribute('data-id', doc.id)
+        fullname.textContent = doc.data().fullname;
+        /* rut.textContent = doc.data().rut; */
+        
+        option.appendChild(fullname);
+        /* option.appendChild(rut); */
+
+        coworkersList.appendChild(option)
+    }
+
+    db.collection('coworkers').get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+            renderList(doc);
+        })
+      })
 
     //evento del botón que llama a la autentificación de Google
     btn.addEventListener('click', () => {
@@ -41,9 +69,11 @@ export const templateUser = () => {
         let resultFullName = verifyFullName(fullName);
         
         if (resultFullName === false) {
-            alert('Coloca tu nombre y apellido')
+            alert('Por favor coloca tu nombre y apellido')
         } else {
-            registerUser(rut, fullName)
+            newVisitor(rut, fullName)
+
+            rut += ''
         }
     })
     return containerCreate;
