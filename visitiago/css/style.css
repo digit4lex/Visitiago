@@ -1,33 +1,32 @@
 #register {
-width: 328px;
-height: 120px;
-left: 654px;
-top: 1219px;
+  width: 328px;
+  height: 120px;
+  left: 654px;
+  top: 1219px;
 
-background: #8F758E;
-border: 8px solid #735372;
-box-sizing: border-box;
-border-radius: 37px;
+  background: #8F758E;
+  border: 8px solid #735372;
+  box-sizing: border-box;
+  border-radius: 37px;
 
-font-family: Roboto;
-font-style: italic;
-font-weight: bold;
-font-size: 60px;
-line-height: 70px;
-text-align: center;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
 
-color: #F5F5F5;
+  color: #F5F5F5;
 }
 
 #mySelect {
   width: 661px;
-height: 66px;
-left: 54px;
-top: 1101px;
-
-background: #E5E5E5;
-border: 5px solid #8ADFDC;
-box-sizing: border-box;
+  height: 66px;
+  left: 54px;
+  top: 1101px;
+  background: #E5E5E5;
+  border: 5px solid #8ADFDC;
+  box-sizing: border-box;
 }
 
 #logo {
@@ -40,31 +39,31 @@ box-sizing: border-box;
 }
 
 #name {
-width: 483px;
-height: 120px;
-left: 39px;
-top: 633px;
+  width: 483px;
+  height: 120px;
+  left: 39px;
+  top: 633px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 45px;
-line-height: 53px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 53px;
 
-color: #313848;
+  color: #313848;
 }
 
 #rut {
-width: 483px;
-height: 120px;
-left: 39px;
-top: 823px;
+  width: 483px;
+  height: 120px;
+  left: 39px;
+  top: 823px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 45px;
-line-height: 53px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 53px;
 
-color: #313848;
+  color: #313848;
 }
