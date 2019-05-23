@@ -1,3 +1,12 @@
+body{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+
+}
 #register {
 width: 328px;
 height: 120px;
@@ -56,4 +65,11 @@ font-size: 45px;
 line-height: 53px;
 
 color: #313848;
+}
+
+#uploader {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  margin-bottom: 10px;
 }
