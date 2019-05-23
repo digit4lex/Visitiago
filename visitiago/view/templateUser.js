@@ -12,7 +12,7 @@ export const templateUser = () => {
                <input type="number" id="rut" placeholder="RUT" name="">
             </div>
             <div >
-                <button id="register" class="sign-in-style">Registrar visitante</button>
+                <button id="register" class="sign-in-style">Registrar</button>
             </div>`;
 
     //pasar cel contenido al div
