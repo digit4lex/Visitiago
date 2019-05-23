@@ -8,71 +8,57 @@ body{
 
 }
 #register {
-  width: 328px;
-  height: 120px;
+  width: 40%;
   left: 654px;
   top: 1219px;
 
-  background: #8F758E;
-  border: 8px solid #735372;
+  background: #3088fa;
+  border: 3px solid #3088fa;
   box-sizing: border-box;
-  border-radius: 37px;
+  border-radius: 5px;
 
   font-family: Roboto;
   font-style: italic;
   font-weight: bold;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 30px;
+  padding: 1% 2%;
   text-align: center;
+  float: right;
 
   color: #F5F5F5;
 }
 
 #myList {
-  width: 661px;
-  height: 66px;
-  left: 54px;
-  top: 1101px;
+  width: 96%;
   background: #E5E5E5;
-  border: 5px solid #8ADFDC;
+  border: 2px solid #3088fa;
   box-sizing: border-box;
+  margin: 1% 0 1% 0;
+  padding: 4%;
 }
 
 #logo {
   background-image: url(../assets/logo.png);
-  margin-top: 0.2cm;
+  margin-top: 1%;
   height: 200px;
   background-size: 209px;
   background-repeat: no-repeat;
   margin-left: 70px;
 }
 
-#name {
-  width: 483px;
-  height: 120px;
+#name , #rut {
+ 
+  margin:0 0 2% 0;
   left: 39px;
   top: 633px;
+  border-color: #3088fa;
+  padding: 2%;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 45px;
-  line-height: 53px;
+  font-size: 35px;
+ 
 
-  color: #313848;
-}
-
-#rut {
-  width: 483px;
-  height: 120px;
-  left: 39px;
-  top: 823px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 45px;
-  line-height: 53px;
-
-  color: #313848;
+  color: #3088fa;
 }
