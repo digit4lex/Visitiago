@@ -29,6 +29,10 @@
     "jest": "^24.8.0"
   },
   "dependencies": {
+    "@babel/core": "^7.4.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "eslint-plugin-jest": "^22.6.4",
     "express": "^4.17.0",
     "htmlhint": "^0.11.0"
   }
