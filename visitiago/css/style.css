@@ -19,6 +19,17 @@ text-align: center;
 color: #F5F5F5;
 }
 
+#mySelect {
+  width: 661px;
+height: 66px;
+left: 54px;
+top: 1101px;
+
+background: #E5E5E5;
+border: 5px solid #8ADFDC;
+box-sizing: border-box;
+}
+
 #logo {
   background-image: url(../assets/logo.png);
   margin-top: 0.2cm;

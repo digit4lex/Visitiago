@@ -3,15 +3,28 @@ export const templateUser = () => {
     const containerCreate = document.createElement('div');
     const contentCreate = `<div class='' id="green-columns">
                 </div>
-                <div id="logo" >
+                <div id="logo">
+                </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
                 <input type="text" id="name" placeholder="Nombre y Apellido" name="">
             </div>
+
+            <div>
                 <i class="fas fa-key"></i>
                <input type="number" id="rut" placeholder="RUT" name="">
             </div>
-            <div >
+
+            <div>
+            <select id="mySelect" onchange="myFunction()">
+            <option value="Audi">Mario Benedicto</option>
+            <option value="BMW">Sopaipilla</option>
+            <option value="Mercedes">Carlitos</option>
+            <option value="Volvo">Ale</option>
+            </select>
+            </div>
+
+            <div>
                 <button id="register" class="sign-in-style">Registrar</button>
             </div>`;
 
