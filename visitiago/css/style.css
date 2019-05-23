@@ -1,20 +1,59 @@
-body { 
-  background: red; 
-  color: rgba(0,0,0,0.87); 
-  font-family: Roboto, Helvetica, Arial, sans-serif; 
-  margin: 0; 
-  padding: 0; 
+#register {
+width: 328px;
+height: 120px;
+left: 654px;
+top: 1219px;
+
+background: #8F758E;
+border: 8px solid #735372;
+box-sizing: border-box;
+border-radius: 37px;
+
+font-family: Roboto;
+font-style: italic;
+font-weight: bold;
+font-size: 60px;
+line-height: 70px;
+text-align: center;
+
+color: #F5F5F5;
 }
 
-#root { 
-  background: green; 
-  max-width: 360px; 
-  margin: 100px auto 16px; 
-  padding: 32px 24px; 
-  border-radius: 3px; }
+#logo {
+  background-image: url(../assets/logo.png);
+  margin-top: 0.2cm;
+  height: 200px;
+  background-size: 209px;
+  background-repeat: no-repeat;
+  margin-left: 70px;
+}
 
+#name {
+width: 483px;
+height: 120px;
+left: 39px;
+top: 633px;
 
-@media (max-width: 600px) {
-  body, #root { margin-top: 0; background: white; box-shadow: none; }
-  body { border-top: 16px solid #ffa100; }
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 53px;
+
+color: #313848;
+}
+
+#rut {
+width: 483px;
+height: 120px;
+left: 39px;
+top: 823px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 53px;
+
+color: #313848;
 }

@@ -3,6 +3,7 @@ export const templateUser = () => {
     const containerCreate = document.createElement('div');
     const contentCreate = `<div class='' id="green-columns">
                 </div>
+                <div id="logo" >
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
                 <input type="text" id="name" placeholder="Nombre y Apellido" name="">
@@ -11,7 +12,7 @@ export const templateUser = () => {
                <input type="number" id="rut" placeholder="RUT" name="">
             </div>
             <div >
-                <button id="register" class="sign-in-style">Registrar visitante</button>
+                <button id="register" class="sign-in-style">Registrar</button>
             </div>`;
 
     //pasar cel contenido al div
