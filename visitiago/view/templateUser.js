@@ -9,7 +9,7 @@ export const templateUser = () => {
                 </div>
             <div class="cfield">
                 <i class="fas fa-user-alt"></i>
-                <input type="text" id="name" placeholder="Nombre y Apellido" name="">
+                <input type="text" id="fullname" placeholder="Nombre y Apellido" name="">
             </div>
 
             <div>
@@ -71,41 +71,72 @@ export const templateUser = () => {
     btn.addEventListener('click', () => {
 
         let rut = containerCreate.querySelector('#rut').value;
-        let fullName = containerCreate.querySelector('#full-name').value;
-        let resultFullName = verifyFullName(fullName);
+        let fullName = containerCreate.querySelector('#fullname').value;
+        let uploader = document.querySelector('#uploader').value;
+        let fileButton = document.querySelector('#fileButton');
 
-        // Obtener Elementos
-let uploader = document.querySelector('#uploader');
-let fileButton = document.querySelector('#fileButton');
-// Vigilar selección archivo
-fileButton.addEventListener('change', function(e) {
-  //Obtener archivo
-  let file = e.target.files[0];
-  // Crear un storage ref
-  let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
-  // Subir archivo
-  let task = storageRef.put(file);
-  // Actualizar barra progreso
-  task.on('state_changed',
-    function progress(snapshot) {
-      let percentage = (snapshot.bytesTransferred /
-        snapshot.totalBytes) * 100;
-      uploader.value = percentage;
-    },
-    
-    function error(err) {
-    },
-    function complete() {
-    }
-    );
+
+        /*let uploader = document.querySelector('#uploader');
+        let fileButton = document.querySelector('#fileButton');
+        // Vigilar selección archivo
+        fileButton.addEventListener(function(e) {
+        // Create a root reference
+let storageRef = firebase.storage().ref();
+
+// Create a reference to 'mountains.jpg'
+let mountainsRef = storageRef.child('mountains.jpg');
+
+// Create a reference to 'images/mountains.jpg'
+let mountainImagesRef = storageRef.child('mis_fotos/' + file.name);
+
+// While the file names are the same, the references point to different files
+mountainsRef.name === mountainImagesRef.name            // true
+
+let file = this.files[0];// use the Blob or File API
+ref.put(file).then(function(snapshot) {
+  console.log('Uploaded a blob or file!');
 });
 
+        // Uint8Array
+let bytes = new Uint8Array([0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x2c, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21]);
+ref.put(bytes).then(function(snapshot) {
+  console.log('Uploaded an array!');
+});
+        });*/
+
+        // Obtener Elementos
+    
+       
+
+        // Vigilar selección archivo
+        fileButton.addEventListener('change', function(e) {
+        //Obtener archivo
+        let file = this.files[0];
+        // Crear un storage ref
+        let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
+        // Subir archivo
+        let task = storageRef.put(file);
+        // Actualizar barra progreso
+        task.on('state_changed',
+        function progress(snapshot) {
+        let percentage = (snapshot.bytesTransferred /
+        snapshot.totalBytes) * 100;
+        uploader.value = percentage;
+        },
+    
+        function error(err) {
+        },
+        function complete() {
+        }
+        );
+        });
+
         
-        if (resultFullName === false) {
+        /* if (resultFullName === false) {
             alert('Por favor coloca tu nombre y apellido')
         } else {
             newVisitor(rut, fullName)
-        }
+        } */
     })
     return containerCreate;
 }
