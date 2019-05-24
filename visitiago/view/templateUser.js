@@ -1,4 +1,3 @@
-import {templateAdmin} from './templateAdmin.js'
 import {verifyFullName , verifyRUT} from '../tests/validations.js'
 
 export const templateUser = () => {
@@ -67,24 +66,32 @@ export const templateUser = () => {
         })
       })
 
-      btn.addEventListener('click', () => {
 
-        let uploader = document.querySelector('#uploader');
+btn.addEventListener('click', () => {
+        let rut = containerCreate.querySelector('#rut').value;
+        let uploader = document.querySelector('#uploader').value;
         let fileButton = document.querySelector('#fileButton');
-// Vigilar selección archivo
-fileButton.addEventListener('change', function(e) {
-  //Obtener archivo
-  let file = e.target.files[0];
-  // Crear un storage ref
-  let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
-  // Subir archivo
-  let task = storageRef.put(file);
-  // Actualizar barra progreso
-  task.on('state_changed',
-    function progress(snapshot) {
-      let percentage = (snapshot.bytesTransferred /
+        let fullname = containerCreate.querySelector('#fullname').value;
+        let resultfullname = verifyFullName(fullname);
+        let resultRUT = verifyRUT(rut)
+    
+       
+
+        // Vigilar selección archivo
+        fileButton.addEventListener('change', function(e) {
+        //Obtener archivo
+        let file = this.files[0];
+        // Crear un storage ref
+        let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
+        // Subir archivo
+        let task = storageRef.put(file);
+        // Actualizar barra progreso
+        task.on('state_changed',
+        function progress(snapshot) {
+        let percentage = (snapshot.bytesTransferred /
         snapshot.totalBytes) * 100;
-    },
+        uploader.value = percentage;
+        },
     
     function error(err) {
     },
@@ -93,12 +100,6 @@ fileButton.addEventListener('change', function(e) {
     );
 });
 
-
-
-    let fullname = containerCreate.querySelector('#fullname').value;
-    let rut = containerCreate.querySelector('#rut').value;
-    let resultfullname = verifyFullName(fullname);
-    let resultRUT = verifyRUT(rut)
 
         
         if (resultfullname === false) {
