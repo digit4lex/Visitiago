@@ -71,15 +71,19 @@ body{
 }
 
 #logo {
-width: 334px;
-height: 347px;
-border-radius: 315.5px;
-margin-left: 60px;
-margin-top: -35px;
+  width: 334px;
+  height: 347px;
+  border-radius: 315.5px;
+  margin-left: 60px;
+  margin-top: -35px;
 }
 
 #go-back {
- font-size: 35px;
+  font-size: 55px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 41px;
+  color: #313848;
 }
 
 #visitors-list p {
@@ -88,9 +92,14 @@ margin-top: -35px;
   font-size: 20px;
 }
 
+#vergacion {
+  background-image: url(../assets/arrow-left.svg)
+}
+
 #visitors-list-title {
-  color: #313848;
-  font-size: 20px;
+  color: #141b2b;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 #fullname{
@@ -139,6 +148,25 @@ margin-top: -35px;
   color: #313848;
 }
 
+#stats {
+  width: 228px;
+  height: 45x;
+  
+  background: #8F758E;
+  border: 8px solid #735372;
+  box-sizing: border-box;
+  border-radius: 37px;
+  margin-left: 100px;
+  margin-top: 55px;
+
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #F5F5F5;
+}
 
 #adminText {
   font-style: italic;

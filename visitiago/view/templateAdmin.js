@@ -2,8 +2,10 @@ export const templateAdmin = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
     const contentCreate = `
-
-                <a href="#/user">Volver a visitante</a>
+                <a href="#/user">
+                <img id"go-back"  src="../visitiago/assets/arrow-left.svg" width="60px"> Volver a visitante</img>
+                </a>
+                <br>
                 <br>
                 <br>
 
@@ -29,14 +31,17 @@ export const templateAdmin = () => {
     function renderList(doc) {
         let li = document.createElement('p');
         let fullname = document.createElement('div');
-        let rut = document.createElement('span');
+        let rut = document.createElement('div');
+        let visiting = document.createElement('div')
 
         li.setAttribute('data-id', doc.id)
-        fullname.textContent = doc.data().fullname;
-        rut.textContent = doc.data().rut;
+        fullname.textContent = 'Visitante: ' + doc.data().fullname;
+        rut.textContent = 'RUT:  ' + doc.data().rut;
+        visiting.textContent = 'Visitando a: ' + doc.data().visiting;
 
         li.appendChild(fullname);
         li.appendChild(rut);
+        li.append(visiting)
 
         list.appendChild(li)
     }
@@ -49,30 +54,13 @@ export const templateAdmin = () => {
     })
 
     stats.addEventListener('click', () => {
-        `<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>`
+        alert('Disculpe, todavía no está disponible esta sección')
     })
 
 
     if (prompt('Ingresa la contraseña') != 1234) {
         alert('Contraseña inválida')
+        location = "";
     } else {
         return containerCreate;
     }

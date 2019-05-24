@@ -1,5 +1,3 @@
-import {verifyFullName , verifyRUT} from '../tests/validations.js'
-
 export const templateUser = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
@@ -13,20 +11,19 @@ export const templateUser = () => {
             <p class="uploadPhoto">Ingrese una foto (opcional)</p>
             <input type="file" accept="image/*" value="upload" id="fileButton" capture="camera">
             </div>
-
-            <div>
-            <p class="selectCoworker">¿A quién viene a visitar?</p>
-            <select id="my-list" >
-            </select>
-            </div>
             
             <div class="cfield">
             <form id="add-visitor-form">
                 <p class="fullname">Nombre y Apellido del visitante</p>
                 <input type="text" id="fullname" name="name">
             
-                <p class="rut">RUT del visitante</p>
+                <p class="rut">RUT o pasaporte del visitante</p>
                <input type="text" id="rut" name="rut">
+
+               <p class="selectCoworker">¿A quién viene a visitar?</p>
+               <select id="my-list" name="option">
+               </select>
+
                <br>
                <button id="register" class="sign-in-style">Registrar</button>
                 </form>
@@ -46,7 +43,6 @@ export const templateUser = () => {
     const btn = containerCreate.querySelector('#register');
     const coworkersList = containerCreate.querySelector('#my-list');
     const form = containerCreate.querySelector('#add-visitor-form')
-
 
     function renderList(doc) {
         let option = document.createElement('option');
@@ -75,7 +71,7 @@ export const templateUser = () => {
             db.collection('visitors').add({
                 fullname: form.name.value,
                 rut: form.rut.value,
-                visiting: renderList
+                visiting: form.option.value
             })
         } else {
             alert('no puedes dejar campos vacios')
