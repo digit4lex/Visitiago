@@ -1,39 +1,26 @@
+    
 {
-  "name": "visitiago",
-  "version": "1.0.0",
-  "description": "Aplicación para tablets para registrar eficazmente las visitas que reciben los empleados de una empresa.",
-  "main": "public/index.html",
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
   "scripts": {
-    "test": "jest"
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy",
+    "logs": "firebase functions:log"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aleisabl/hackaton-visitors.git"
-  },
-  "keywords": [
-    "visitors",
-    "visitor",
-    "managenemt",
-    "app",
-    "tablet",
-    "registration"
-  ],
-  "author": "Alexandra, Karen, Majo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aleisabl/hackaton-visitors/issues"
-  },
-  "homepage": "https://github.com/aleisabl/hackaton-visitors#readme",
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "jest": "^24.8.0"
+  "engines": {
+    "node": "8"
   },
   "dependencies": {
-    "@babel/core": "^7.4.5",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^24.8.0",
-    "eslint-plugin-jest": "^22.6.4",
-    "express": "^4.17.0",
-    "htmlhint": "^0.11.0"
-  }
+    "firebase-admin": "~7.0.0",
+    "firebase-functions": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
 }
