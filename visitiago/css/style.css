@@ -5,74 +5,162 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column; 
+  font-family: 'Courier New', Courier, monospace
 
 }
 #register {
   width: 328px;
-  height: 120px;
-  left: 654px;
-  top: 1219px;
-
+  height: 80px;
+  
   background: #8F758E;
   border: 8px solid #735372;
   box-sizing: border-box;
   border-radius: 37px;
+  margin-left: 100px;
+  margin-top: 55px;
 
-  font-family: Roboto;
   font-style: italic;
   font-weight: bold;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 30px;
+  line-height: 30px;
   text-align: center;
 
   color: #F5F5F5;
 }
 
 #myList {
-  width: 661px;
-  height: 66px;
-  left: 54px;
-  top: 1101px;
-  background: #E5E5E5;
-  border: 5px solid #8ADFDC;
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #313848;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 100%;
+  max-width: 100%; 
   box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+#myList::-ms-expand {
+  display: none;
+}
+#myList:hover {
+  border-color: #888;
+}
+#myList:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222; 
+  outline: none;
+}
+#myList option {
+  font-weight:normal;
 }
 
 #logo {
-  background-image: url(../assets/logo.png);
-  margin-top: 0.2cm;
-  height: 200px;
-  background-size: 209px;
-  background-repeat: no-repeat;
-  margin-left: 70px;
+width: 334px;
+height: 347px;
+border-radius: 315.5px;
+margin-left: 60px;
 }
 
-#name {
-  width: 483px;
-  height: 120px;
-  left: 39px;
-  top: 633px;
+#arrow {
+ font-size: 35px;
+}
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 45px;
-  line-height: 53px;
+#fullname{
+  width: 500px;
+  font-size: 20px;
+  height: 39px;
+  left: 189px;
+  top: 712px;
+  background: #FFFFFF;
+  border: 5px solid #8ADFDC;
+  border-top-width: 0cm;
+  border-left-width: 0cm;
+  border-right-width: 0cm;
+  box-sizing: border-box;
+}
 
+.fullname {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 41px;
   color: #313848;
+}
+
+.rut {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 41px;
+  color: #313848;
+}
+
+.uploadPhoto {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 41px;
+  color: #313848;
+}
+
+.selectCoworker {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 41px;
+  color: #313848;
+}
+
+
+#adminText {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  color: #313848;
+  margin-top: 200px;
+}
+
+#fileButton {
+  width: 500px;
+  height: 59px;
+  left: 59px;
+  top: 702px;
+  font-size: 20px;
+  background: #FFFFFF;
+  margin: 10px;
+  border: 5px solid #8ADFDC;
+  border-top-width: 0cm;
+  border-left-width: 0cm;
+  border-right-width: 0cm;
+  box-sizing: border-box;
 }
 
 #rut {
-  width: 483px;
-  height: 120px;
-  left: 39px;
-  top: 823px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 45px;
-  line-height: 53px;
-
-  color: #313848;
+  width: 500px;
+  left: 189px;
+  top: 702px;
+  font-size: 20px;
+  background: #FFFFFF;
+  border: 5px solid #8ADFDC;
+  border-top-width: 0cm;
+  border-left-width: 0cm;
+  border-right-width: 0cm;
+  box-sizing: border-box;
 }
