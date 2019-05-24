@@ -69,37 +69,38 @@ export const templateUser = () => {
 
 
 
-        /* let uploader = document.querySelector('#uploader');
-        let fileButton = document.querySelector('#fileButton');
-// Vigilar selección archivo
-fileButton.addEventListener('change', function(e) {
-  //Obtener archivo
-  let file = e.target.files[0];
-  // Crear un storage ref
-  let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
-  // Subir archivo
-  let task = storageRef.put(file);
-  // Actualizar barra progreso
-  task.on('state_changed',
-    function progress(snapshot) {
-      let percentage = (snapshot.bytesTransferred /
-        snapshot.totalBytes) * 100;
-    },
-    
-    function error(err) {
-    },
-    function complete() {
-    }
-    );
-}); */
-
 btn.addEventListener('click', () => {
+        let rut = containerCreate.querySelector('#rut').value;
+        let uploader = document.querySelector('#uploader').value;
+        let fileButton = document.querySelector('#fileButton');
+        let fullname = containerCreate.querySelector('#fullname').value;
+        let resultfullname = verifyFullName(fullname);
+        let resultRUT = verifyRUT(rut)
+    
+       
 
-    let fullname = containerCreate.querySelector('#fullname').value;
-    let rut = containerCreate.querySelector('#rut').value;
-    let resultfullname = verifyFullName(fullname);
-    let resultRUT = verifyRUT(rut)
-
+        // Vigilar selección archivo
+        fileButton.addEventListener('change', function(e) {
+        //Obtener archivo
+        let file = this.files[0];
+        // Crear un storage ref
+        let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
+        // Subir archivo
+        let task = storageRef.put(file);
+        // Actualizar barra progreso
+        task.on('state_changed',
+        function progress(snapshot) {
+        let percentage = (snapshot.bytesTransferred /
+        snapshot.totalBytes) * 100;
+        uploader.value = percentage;
+        },
+    
+        function error(err) {
+        },
+        function complete() {
+        }
+        );
+        });
         
         if (resultfullname === false) {
             alert('Por favor coloca tu nombre y apellido')
@@ -107,7 +108,6 @@ btn.addEventListener('click', () => {
             alert('Por favor coloca tu rut')
         } else {
             newVisitor(rut, fullname)
-        }
     })
     return containerCreate;
 }
