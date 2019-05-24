@@ -15,10 +15,10 @@ export const templateAdmin = () => {
                 <ul class="list-group" id="visitors-list">
                 </ul>
             </div>
-            <br><br>
+            <br>
                
             <div>
-                <button id="stats" data-toggle="modal" data-target="#exampleModal" class="sign-in-style">Ver estadísticas</button>
+                <button id="stats" class="sign-in-style">Ver estadísticas</button>
             </div>
                `;
 
@@ -40,7 +40,7 @@ export const templateAdmin = () => {
         fullname.textContent = 'Visitante: ' + doc.data().fullname;
         rut.textContent = 'RUT:  ' + doc.data().rut;
         visiting.textContent = 'Visitando a: ' + doc.data().visiting;
-        pic = doc.data().photo;
+        pic = 'Imagen: ' + doc.data().photo;
 
         li.appendChild(fullname);
         li.appendChild(rut);
