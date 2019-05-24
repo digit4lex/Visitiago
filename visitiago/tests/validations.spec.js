@@ -1,4 +1,52 @@
-describe("firestore", () => {
+import { verifyFullName, verifyRUT } from './validations.js';
+
+describe('verifyFullName', () => {
+
+    it('si no ha ingresado su nombre y apellido, retorna false y un alert que debe ingresar sus datos', () => {
+        expect(verifyFullName('')).toBe(false);
+    });
+
+    it('si ha ingresado su nombre y apellido, retorna true', () => {
+        expect(verifyRecipe('fulanita pepito')).toBe(true);
+    });
+
+}) 
+
+describe('verifyRUT', () => {
+
+    it('si ingresa su rut, retorna true', () => {
+        expect(verifyRUT(123123456)).toBe(true);
+    });
+
+    it('si no ingresa su rut, retorna false', () => {
+        expect(verifyRUT()).toBe(false);
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* describe("firestore", () => {
     let db;
     before(() => {
         let config = {
@@ -79,4 +127,4 @@ describe("collection('coworkers')", () => {
         });
         // [END update_document]
     });
-})
+}) */

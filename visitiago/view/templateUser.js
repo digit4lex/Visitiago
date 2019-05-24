@@ -67,9 +67,9 @@ export const templateUser = () => {
         })
       })
 
+      btn.addEventListener('click', () => {
 
-
-        /* let uploader = document.querySelector('#uploader');
+        let uploader = document.querySelector('#uploader');
         let fileButton = document.querySelector('#fileButton');
 // Vigilar selección archivo
 fileButton.addEventListener('change', function(e) {
@@ -91,9 +91,9 @@ fileButton.addEventListener('change', function(e) {
     function complete() {
     }
     );
-}); */
+});
 
-btn.addEventListener('click', () => {
+
 
     let fullname = containerCreate.querySelector('#fullname').value;
     let rut = containerCreate.querySelector('#rut').value;
