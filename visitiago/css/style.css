@@ -73,9 +73,12 @@ body{
 #logo {
 width: 334px;
 height: 347px;
-background: url(logo.png);
 border-radius: 315.5px;
 margin-left: 60px;
+}
+
+#arrow {
+ font-size: 35px;
 }
 
 #fullname{

@@ -3,6 +3,11 @@ export const templateAdmin = () => {
     const containerCreate = document.createElement('div');
     const contentCreate = `<div class='' id="green-columns">
                 </div>
+
+                <div>
+                <a href="#/user" id="arrow" <i class="fas fa-arrow-left">Volver</i></a>
+                </div>
+
             <div class="cfield">
                 <ul id="visitorsList"></ul>
             </div>
@@ -12,7 +17,7 @@ export const templateAdmin = () => {
             </div>
                `;
 
-    //pasar cel contenido al div
+    //pasar el contenido al div
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#register');

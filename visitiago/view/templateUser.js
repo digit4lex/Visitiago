@@ -1,4 +1,5 @@
 import {templateAdmin} from './templateAdmin.js'
+import {verifyFullName , verifyRUT} from '../tests/validations.js'
 
 export const templateUser = () => {
     //creamos div que contendrá la plantilla
@@ -42,12 +43,9 @@ export const templateUser = () => {
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#register');
+    
+
     const coworkersList = containerCreate.querySelector('#myList');
-
-     /* let rut = containerCreate.querySelector('#rut').value;
-        let fullName = containerCreate.querySelector('#fullname').value;
-        let resultFullName = verifyFullName(fullName); */
-
     function renderList(doc) {
         let option = document.createElement('option');
         let fullname = document.createElement('span');
@@ -69,10 +67,9 @@ export const templateUser = () => {
         })
       })
 
-    //evento del botón que llama a la autentificación de Google
-    btn.addEventListener('click', () => {
 
-        let uploader = document.querySelector('#uploader');
+
+        /* let uploader = document.querySelector('#uploader');
         let fileButton = document.querySelector('#fileButton');
 // Vigilar selección archivo
 fileButton.addEventListener('change', function(e) {
@@ -94,14 +91,23 @@ fileButton.addEventListener('change', function(e) {
     function complete() {
     }
     );
-});
+}); */
+
+btn.addEventListener('click', () => {
+
+    let fullname = containerCreate.querySelector('#fullname').value;
+    let rut = containerCreate.querySelector('#rut').value;
+    let resultfullname = verifyFullName(fullname);
+    let resultRUT = verifyRUT(rut)
 
         
-      /*   if (resultFullName === false) {
+        if (resultfullname === false) {
             alert('Por favor coloca tu nombre y apellido')
+        } else if (resultRUT === false) {
+            alert('Por favor coloca tu rut')
         } else {
-            newVisitor(rut, fullName)
-        } */
+            newVisitor(rut, fullname)
+        }
     })
     return containerCreate;
 }
