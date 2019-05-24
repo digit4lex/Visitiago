@@ -1,4 +1,4 @@
-import { verifyFullName, verifyRUT } from './validations.js';
+/* import { verifyFullName, verifyRUT } from './validations.js';
 
 describe('verifyFullName', () => {
 
@@ -25,7 +25,7 @@ describe('verifyRUT', () => {
 });
 
 
-
+ */
 
 
 

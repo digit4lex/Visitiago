@@ -5,32 +5,34 @@ export const templateUser = () => {
     const containerCreate = document.createElement('div');
     const contentCreate = `
                 <img id="logo" src="../visitiago/assets/logo.png">
-            <div class="cfield">
-                <i class="fas fa-user-alt"></i>
-                <p class="fullname">Nombre y Apellido</p>
-                <input type="text" id="fullname" name="">
-            </div>
+            
+              
 
-            <div>
-                <i class="fas fa-key"></i>
-                <p class="rut">RUT</p>
-               <input type="text" id="rut" name="">
-            </div>
 
             <div class="photo">
-            <p class="uploadPhoto">Ingrese una foto</p>
+            <p class="uploadPhoto">Ingrese una foto (opcional)</p>
             <input type="file" accept="image/*" value="upload" id="fileButton" capture="camera">
             </div>
 
             <div>
             <p class="selectCoworker">¿A quién viene a visitar?</p>
-            <select id="myList" onchange="myFunction()">
+            <select id="my-list" >
             </select>
             </div>
             
-
+            <div class="cfield">
+            <form id="add-visitor-form">
+                <p class="fullname">Nombre y Apellido del visitante</p>
+                <input type="text" id="fullname" name="name">
+            
+                <p class="rut">RUT del visitante</p>
+               <input type="text" id="rut" name="rut">
+               <br>
+               <button id="register" class="sign-in-style">Registrar</button>
+                </form>
+                </div>
             <div>
-                <button id="register" class="sign-in-style">Registrar</button>
+                
             </div>
             <br>
             <br>
@@ -42,9 +44,10 @@ export const templateUser = () => {
     containerCreate.innerHTML = contentCreate;
     //le pido que busque el id del botón dentro del div cerrado
     const btn = containerCreate.querySelector('#register');
-    
+    const coworkersList = containerCreate.querySelector('#my-list');
+    const form = containerCreate.querySelector('#add-visitor-form')
 
-    const coworkersList = containerCreate.querySelector('#myList');
+
     function renderList(doc) {
         let option = document.createElement('option');
         let fullname = document.createElement('span');
@@ -59,21 +62,31 @@ export const templateUser = () => {
 
         coworkersList.appendChild(option)
     }
-
+    //obteniendo la  data de los coworkers
     db.collection('coworkers').get().then((snapshot) => {
         snapshot.docs.forEach(doc => {
             renderList(doc);
         })
       })
+    //salvando la data de los visitantes
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (form.name.value != '' && form.rut.value != '') {
+            db.collection('visitors').add({
+                fullname: form.name.value,
+                rut: form.rut.value,
+                visiting: renderList
+            })
+        } else {
+            alert('no puedes dejar campos vacios')
+        }
+        
+    })
+
 
 
 btn.addEventListener('click', () => {
-        let rut = containerCreate.querySelector('#rut').value;
-        let uploader = document.querySelector('#uploader').value;
         let fileButton = document.querySelector('#fileButton');
-        let fullname = containerCreate.querySelector('#fullname').value;
-        let resultfullname = verifyFullName(fullname);
-        let resultRUT = verifyRUT(rut)
     
        
 
@@ -85,30 +98,8 @@ btn.addEventListener('click', () => {
         let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
         // Subir archivo
         let task = storageRef.put(file);
-        // Actualizar barra progreso
-        task.on('state_changed',
-        function progress(snapshot) {
-        let percentage = (snapshot.bytesTransferred /
-        snapshot.totalBytes) * 100;
-        uploader.value = percentage;
-        },
-    
-    function error(err) {
-    },
-    function complete() {
-    }
-    );
 });
 
-
-        
-        if (resultfullname === false) {
-            alert('Por favor coloca tu nombre y apellido')
-        } else if (resultRUT === false) {
-            alert('Por favor coloca tu rut')
-        } else {
-            newVisitor(rut, fullname)
-        }
     })
     return containerCreate;
 }
