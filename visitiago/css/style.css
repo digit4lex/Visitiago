@@ -78,6 +78,14 @@ body{
   margin-top: -35px;
 }
 
+#welcome {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 41px;
+  color: #313848;
+}
+
 #go-back {
   font-size: 55px;
   font-style: italic;

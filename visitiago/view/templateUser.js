@@ -3,24 +3,29 @@ export const templateUser = () => {
     const containerCreate = document.createElement('div');
     const contentCreate = `
                 <img id="logo" src="../visitiago/assets/logo.png">
+
+                <p id="welcome">¡Bienvenido! Por favor ingresa tus datos</p>
             
               
 
 
             <div class="photo">
-            <p class="uploadPhoto">Ingrese una foto (opcional)</p>
-            <input type="file" accept="image/*" value="upload" id="fileButton" capture="camera">
+            
             </div>
             
             <div class="cfield">
             <form id="add-visitor-form">
+
+            <p class="uploadPhoto">Ingrese una foto (opcional)</p>
+            <input type="file" accept="image/*" value="upload" id="fileButton" name="pic" capture="camera">
+
                 <p class="fullname">Nombre y Apellido del visitante</p>
                 <input type="text" id="fullname" name="name">
             
                 <p class="rut">RUT o pasaporte del visitante</p>
                <input type="text" id="rut" name="rut">
 
-               <p class="selectCoworker">¿A quién viene a visitar?</p>
+               <p class="selectCoworker">¿A quién vienes a visitar?</p>
                <select id="my-list" name="option">
                </select>
 
@@ -44,15 +49,16 @@ export const templateUser = () => {
     const coworkersList = containerCreate.querySelector('#my-list');
     const form = containerCreate.querySelector('#add-visitor-form')
 
+
     function renderList(doc) {
         let option = document.createElement('option');
         let fullname = document.createElement('span');
-       /*  let rut = document.createElement('span'); */
+        /*  let rut = document.createElement('span'); */
 
         option.setAttribute('data-id', doc.id)
         fullname.textContent = doc.data().fullname;
         /* rut.textContent = doc.data().rut; */
-        
+
         option.appendChild(fullname);
         /* option.appendChild(rut); */
 
@@ -63,38 +69,38 @@ export const templateUser = () => {
         snapshot.docs.forEach(doc => {
             renderList(doc);
         })
-      })
-    //salvando la data de los visitantes
+    })
+    //salvando la data de los visitantes 
     form.addEventListener('submit', (e) => {
+        let filevalue = form.fileButton.value;
         e.preventDefault();
         if (form.name.value != '' && form.rut.value != '') {
             db.collection('visitors').add({
                 fullname: form.name.value,
                 rut: form.rut.value,
-                visiting: form.option.value
+                visiting: form.option.value,
+                photo: 'https://firebasestorage.googleapis.com/v0/b/visitiago.appspot.com/o/mis_fotos%' + filevalue
             })
+            alert('¡Visitante registrado exitosamente!')
         } else {
-            alert('no puedes dejar campos vacios')
+            alert('No puedes dejar campos vacios')
         }
-        
+
     })
 
 
+    btn.addEventListener('click', () => {
 
-btn.addEventListener('click', () => {
-        let fileButton = document.querySelector('#fileButton');
-    
-       
-
+        const fileButton = document.querySelector('#fileButton');
         // Vigilar selección archivo
-        fileButton.addEventListener('change', function(e) {
-        //Obtener archivo
-        let file = this.files[0];
-        // Crear un storage ref
-        let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
-        // Subir archivo
-        let task = storageRef.put(file);
-});
+        fileButton.addEventListener('change', function (e) {
+            //Obtener archivo
+            let file = this.files[0];
+            // Crear un storage ref
+            let storageRef = firebase.storage().ref('mis_fotos/' + file.name);
+            // Subir archivo
+            let task = storageRef.put(file);
+        });
 
     })
     return containerCreate;

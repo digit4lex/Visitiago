@@ -1,3 +1,4 @@
+
 export const templateAdmin = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
@@ -33,15 +34,18 @@ export const templateAdmin = () => {
         let fullname = document.createElement('div');
         let rut = document.createElement('div');
         let visiting = document.createElement('div')
+        let pic = document.createElement('div')
 
         li.setAttribute('data-id', doc.id)
         fullname.textContent = 'Visitante: ' + doc.data().fullname;
         rut.textContent = 'RUT:  ' + doc.data().rut;
         visiting.textContent = 'Visitando a: ' + doc.data().visiting;
+        pic = doc.data().photo;
 
         li.appendChild(fullname);
         li.appendChild(rut);
         li.append(visiting)
+        li.append(pic)
 
         list.appendChild(li)
     }
