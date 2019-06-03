@@ -24,4 +24,4 @@ Sin más, te invitamos a ingresar a nuestra aplicación y probarla [aquí](https
  * Permite a los administradores tener un registro de los visitantes.
 
 ## Autores
-Este proyecto fue realizado por `Alexandra Fernandez`, `Karen Quezada` y `Maria Jose Marquez` para `Laboratoria, Chile` en una hackaton de 3 días.
+Este proyecto fue realizado por `Alexandra Fernández`, `Karen Quezada` y `Maria José Marquez` para `Laboratoria, Chile` en una hackaton de 3 días.
