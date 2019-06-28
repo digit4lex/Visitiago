@@ -1,6 +1,6 @@
 # [Hackaton-visitors](https://aleisabl.github.io/hackaton-visitors/public/index.html)
 
-Viviendo en un mundo digitalizado, en donde la tecnología se ah vuelto un factor importante con el ahorro de tiempo en tareas y almacenamiento, Visitiago es una herramienta importante para agilizar el registro de entradas de visitas en cualquier empresa. 
+Viviendo en un mundo digitalizado, en donde la tecnología se ha vuelto un factor importante con el ahorro de tiempo en tareas y almacenamiento, Visitiago es una herramienta importante para agilizar el registro de entradas de visitas en cualquier empresa. 
 
 Visitiago permite al usuario poder registrarse sin necesidad de loguearse o mantener una cuenta para poder marcar su ingreso. 
 Nuestra aplicación cuenta con una base de datos, que almacenará la información que sea ingresada por nuestros usuarios visitantes. De igual forma, entrega a través de una cuenta de administrador el registro de los visitantes. 
