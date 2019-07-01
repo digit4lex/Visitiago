@@ -1,4 +1,4 @@
-# [Hackaton-visitors](https://aleisabl.github.io/hackaton-visitors/public/index.html)
+# [Hackaton-visitors](https://aleisabl.github.io/Visitiago/public/index.html)
 
 Viviendo en un mundo digitalizado, en donde la tecnología se ha vuelto un factor importante con el ahorro de tiempo en tareas y almacenamiento, Visitiago es una herramienta importante para agilizar el registro de entradas de visitas en cualquier empresa. 
 
@@ -7,7 +7,7 @@ Nuestra aplicación cuenta con una base de datos, que almacenará la informació
 
 Visitiago también permite almacenar una fotografía de la cédula de identidad de nuestros visitantes para poder tener un control formal de las visitas obtenidas. 
 
-Sin más, te invitamos a ingresar a nuestra aplicación y probarla [aquí](https://aleisabl.github.io/hackaton-visitors/public/index.html) , el feedback es más que bienvenido.
+Sin más, te invitamos a ingresar a nuestra aplicación y probarla [aquí](https://aleisabl.github.io/Visitiago/public/index.html) , el feedback es más que bienvenido.
 
 <img src="./visitiago/assets/visitiago.png" width=500px;>
 
